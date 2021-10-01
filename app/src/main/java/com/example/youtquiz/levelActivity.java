@@ -25,7 +25,7 @@ public class levelActivity extends AppCompatActivity {
             questionModel.setFourVariant("Скорлупа");
             questionModel.setAnswer("Курица");
             Intent intent = new Intent(levelActivity.this, gameActivity.class);
-            intent.putExtra("KEY",questionModel);
+            intent.putExtra("KEY", questionModel);
             startActivity(intent);
         });
 
@@ -39,7 +39,21 @@ public class levelActivity extends AppCompatActivity {
             questionModel.setFourVariant("Президент");
             questionModel.setAnswer("Ель");
             Intent intent = new Intent(levelActivity.this, gameActivity.class);
-            intent.putExtra("KEY",questionModel);
+            intent.putExtra("KEY", questionModel);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.third_level).setOnClickListener(view -> {
+            QuestionModel questionModel = new QuestionModel();
+            questionModel.setCurrentLevel("3 Уровень");
+            questionModel.setQuestion("Кого боится кот?");
+            questionModel.setFirstVariant("Мышей");
+            questionModel.setSecondVariant("Кроликов");
+            questionModel.setThirdVariant("Собак");
+            questionModel.setFourVariant("Крыс");
+            questionModel.setAnswer("Собак");
+            Intent intent = new Intent(levelActivity.this, gameActivity.class);
+            intent.putExtra("KEY", questionModel);
             startActivity(intent);
         });
     }

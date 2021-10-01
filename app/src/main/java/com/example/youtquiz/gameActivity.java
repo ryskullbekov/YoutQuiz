@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class gameActivity extends AppCompatActivity {
     Button firstAnswer, secondAnswer, thirdAnswer, fourAnswer;
@@ -19,6 +20,8 @@ public class gameActivity extends AppCompatActivity {
     private String thirdVariant;
     private String fourVariant;
     private String currentLevel;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,27 +66,48 @@ public class gameActivity extends AppCompatActivity {
         firstAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (firstAnswer.getText() == answer){
+                    Toast.makeText(gameActivity.this, "Верно!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(gameActivity.this, "Не верно", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         secondAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (secondAnswer.getText() == answer){
+                    Toast.makeText(gameActivity.this, "Верно!" , Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(gameActivity.this, "Не верно", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         thirdAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (thirdAnswer.getText() == answer){
+                    Toast.makeText(gameActivity.this, "Верно!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(gameActivity.this, "Не верно", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         fourAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (fourAnswer.getText() == answer){
+                    Toast.makeText(gameActivity.this, "Верно!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(gameActivity.this, "Не верно", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
     }
+
+
 }
