@@ -12,9 +12,22 @@ public class QuestionModel implements Serializable {
     private String thirdVariant;
     private String fourVariant;
 
-    public String getCurrentLevel() {
-        return currentLevel;
+    public QuestionModel(String currentLevel, String question, String answer, String firstVariant, String secondVariant, String thirdVariant, String fourVariant) {
+        this.currentLevel = currentLevel;
+        this.question = question;
+        this.answer = answer;
+        this.firstVariant = firstVariant;
+        this.secondVariant = secondVariant;
+        this.thirdVariant = thirdVariant;
+        this.fourVariant = fourVariant;
     }
+
+    public QuestionModel() {
+        
+    }
+
+
+
 
     public void setCurrentLevel(String currentLevel) {
         this.currentLevel = currentLevel;
@@ -66,5 +79,9 @@ public class QuestionModel implements Serializable {
 
     public void setFourVariant(String fourVariant) {
         this.fourVariant = fourVariant;
+    }
+
+    public String getCurrentLevel() {
+        return currentLevel;
     }
 }
